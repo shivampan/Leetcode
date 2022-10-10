@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int search(vector<int>& nums, int target) {
+    if(nums.size()==1 and nums[0]==target)return 0;
+    int lo=0;
+    int hi=nums.size()-1;int mid;
+    while(lo<=hi){
+        mid=lo+(hi-lo)/2;
+        if(nums[mid]==target)return mid;
+        else if(target>nums[mid])lo=mid+1;
+        else hi=mid-1;
+    }
+        return -1;
+    }
+};
