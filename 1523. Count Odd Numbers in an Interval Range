@@ -1,0 +1,8 @@
+class Solution {
+public:
+    int countOdds(int lo, int hi) {
+    if(lo%2==0 and hi%2==0)return (hi-lo)/2;
+    return ((hi-lo)/2)+1;
+   
+    }
+};
